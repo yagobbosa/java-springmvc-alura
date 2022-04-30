@@ -1,6 +1,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -9,29 +12,40 @@
 </head>
 <body>
 	<div class="container">
-		<div class="p-5 mb-4 text-white bg-dark rounded-3">
+		<div class="text-white bg-dark p-5 mb-4 rounded-3">
 			<div class="container-fluid py-5">
 				<h1 class="display-5 fw-bold">Novo pedido</h1>
 			</div>
 		</div>
-		<form action="/pedido/novo" method="POST">
-			<div class="mb-3">
-				<label for="nomeProduto" class="form-label">Produto</label> <input
-					type="text" class="form-control" id="nomeProduto"
-					placeholder="Nome do produto" /> <small>Informe o nome do
-					produto</small>
+		<div class="card">
+			<div class="card-body">
+				<form action="/pedido/novo" method="POST">
+					<div class="mb-3">
+						<label for="" class="form-label">Produto</label> <input
+							type="text" class="form-control" placeholder="Nome do produto" />
+						<small class="fw-light">Informe o nome do produto.</small>
+					</div>
+					<div class="mb-3">
+						<label for="" class="form-label">URL</label> <input type="text"
+							class="form-control" placeholder="URL do produto" /> <small
+							class="fw-light">Procure em um site a URL do produto
+							desejado, e cole aqui.</small>
+					</div>
+					<div class="mb-3">
+						<label for="" class="form-label">Imagem</label> <input type="text"
+							class="form-control" placeholder="URL da imagem" /> <small
+							class="fw-light">Copie a URL de uma imagem do produto
+							desejado, e cole aqui.</small>
+					</div>
+					<div class="mb-3">
+						<label for="" class="form-label">Descrição</label>
+						<textarea class="form-control"
+							placeholder="Adicione detalhes sobre o produto"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+				</form>
 			</div>
-			<div class="mb-3">
-				<label for="exampleInputEmail1" class="form-label">Url</label>
-			</div>
-			<div class="mb-3">
-				<label for="exampleInputEmail1" class="form-label">Imagem</label>
-			</div>
-			<div class="mb-3">
-				<label for="exampleInputPassword1" class="form-label">Descrição</label>
-			</div>
-			<button type="submit" class="btn btn-primary">Cadastrar</button>
-		</form>
+		</div>
 	</div>
 </body>
 </html>
